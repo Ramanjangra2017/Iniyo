@@ -1,0 +1,2 @@
+package com.iniyo.store.controller; import com.iniyo.store.model.Product; import com.iniyo.store.repo.ProductRepo; import org.springframework.web.bind.annotation.*; import java.util.*;
+@RestController @RequestMapping("/api/products") public class ProductController { final ProductRepo repo; public ProductController(ProductRepo r){repo=r;} @GetMapping public List<Product> all(){return repo.findByActiveTrue();} @GetMapping("/{id}") public Product one(@PathVariable Long id){return repo.findById(id).orElseThrow();} }

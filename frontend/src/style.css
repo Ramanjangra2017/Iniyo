@@ -1,0 +1,2854 @@
+/* INIYO FINAL V2 Ã¢â‚¬â€ header/logo + real public/product images */
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,500;0,600;1,500;1,600&display=swap');
+
+
+/* =========================================================
+   VARIABLES
+========================================================= */
+
+:root {
+  --cream: #f7f0e9;
+  --paper: #fffaf5;
+  --white: #fffdf9;
+
+  --rose: #d89b91;
+  --rose-light: #ead8ce;
+  --rose-dark: #a95d58;
+
+  --wine: #6f2630;
+  --wine-dark: #54202a;
+
+  --terracotta: #b96f5e;
+  --sage: #707b68;
+
+  --ink: #2d2725;
+  --muted: #74645e;
+
+  --line: #e5d5ca;
+
+  --shadow: 0 18px 50px rgba(83, 46, 42, 0.10);
+  --shadow-small: 0 8px 25px rgba(83, 46, 42, 0.08);
+}
+
+
+/* =========================================================
+   RESET
+========================================================= */
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  background: var(--cream);
+  color: var(--ink);
+  font-family: 'DM Sans', sans-serif;
+  -webkit-font-smoothing: antialiased;
+}
+
+button,
+input,
+textarea,
+select {
+  font: inherit;
+}
+
+button {
+  cursor: pointer;
+}
+
+a {
+  color: inherit;
+}
+
+img {
+  max-width: 100%;
+}
+
+.site-shell {
+  min-height: 100vh;
+}
+
+
+/* =========================================================
+   HEADER
+========================================================= */
+
+.header {
+  height: 76px;
+  padding: 0 clamp(18px, 5vw, 72px);
+
+  display: flex;
+  align-items: center;
+
+  background: rgba(255, 250, 245, 0.97);
+  backdrop-filter: blur(14px);
+
+  position: sticky;
+  top: 0;
+  z-index: 100;
+
+  border-bottom: 1px solid var(--line);
+}
+
+.header-inner {
+  width: 100%;
+  max-width: 1400px;
+  margin: auto;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+
+/* LOGO */
+
+.brand {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  color: var(--wine);
+  text-decoration: none;
+}
+
+.brand-logo {
+  position: relative;
+  display: inline-block;
+  font-family: 'DM Sans', sans-serif;
+  font-size: 29px;
+  font-weight: 800;
+  letter-spacing: -2.2px;
+  line-height: 1;
+}
+
+.brand-heart {
+  position: absolute;
+  top: -9px;
+  left: 20px;
+  font-size: 12px;
+  line-height: 1;
+  color: var(--wine);
+  transform: rotate(-8deg);
+}
+
+.brand-tagline {
+  padding-left: 10px;
+  border-left: 1px solid var(--line);
+  font-family: 'Playfair Display', serif;
+  font-size: 10px;
+  font-weight: 500;
+  letter-spacing: .3px;
+  color: var(--muted);
+  white-space: nowrap;
+}
+
+
+/* DESKTOP NAV */
+
+.desktop-nav {
+  display: flex;
+  align-items: center;
+  gap: 28px;
+}
+
+.desktop-nav a {
+  color: var(--ink);
+  text-decoration: none;
+
+  font-size: 12px;
+  font-weight: 500;
+
+  transition: color 0.2s ease;
+}
+
+.desktop-nav a:hover {
+  color: var(--wine);
+}
+
+
+/* BAG */
+
+.cart-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+
+  padding: 9px 13px;
+
+  border: 1px solid var(--line);
+  border-radius: 999px;
+
+  background: var(--white);
+}
+
+.cart-link span {
+  min-width: 19px;
+  height: 19px;
+
+  display: inline-grid;
+  place-items: center;
+
+  background: var(--wine);
+  color: white;
+
+  border-radius: 50%;
+
+  font-size: 9px;
+}
+
+
+/* LOGIN */
+
+.login-btn {
+  background: var(--wine) !important;
+  color: white !important;
+
+  padding: 10px 18px;
+
+  border-radius: 999px;
+
+  font-weight: 600 !important;
+}
+
+
+/* LOGGED-IN USER */
+
+.header-user {
+  color: var(--wine);
+  font-size: 12px;
+  font-weight: 600;
+
+  padding: 10px 4px;
+}
+
+
+/* MOBILE NAV */
+
+.mobile-nav {
+  display: none;
+}
+
+
+/* =========================================================
+   TYPOGRAPHY
+========================================================= */
+
+.eyebrow {
+  font-size: 9px;
+  letter-spacing: 2px;
+  color: var(--terracotta);
+  font-weight: 700;
+}
+
+.hero h1,
+.page h1,
+.product-details h1 {
+  font-family: 'Playfair Display', serif;
+
+  font-size: clamp(48px, 5.5vw, 76px);
+  line-height: 0.98;
+
+  letter-spacing: -2.8px;
+  font-weight: 500;
+
+  color: var(--wine);
+
+  margin: 17px 0 24px;
+}
+
+.hero h1 i,
+.page h1 i,
+.product-details h1 i {
+  font-weight: 500;
+}
+
+
+/* =========================================================
+   BUTTONS
+========================================================= */
+
+.primary-btn {
+  border: 0;
+
+  background: var(--wine);
+  color: #fffaf6;
+
+  text-decoration: none;
+
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  gap: 18px;
+
+  min-height: 48px;
+
+  padding: 14px 21px;
+
+  border-radius: 4px;
+
+  font-size: 12px;
+  font-weight: 600;
+
+  box-shadow: 0 10px 25px rgba(111, 38, 48, 0.13);
+
+  transition:
+    transform 0.2s ease,
+    background 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+.primary-btn:hover {
+  background: var(--wine-dark);
+  transform: translateY(-1px);
+
+  box-shadow:
+    0 14px 30px rgba(111, 38, 48, 0.18);
+}
+
+.primary-btn span {
+  font-size: 17px;
+  line-height: 0;
+}
+
+
+/* =========================================================
+   HERO
+========================================================= */
+
+.hero {
+  max-width: 1450px;
+  min-height: 680px;
+
+  margin: auto;
+
+  display: grid;
+  grid-template-columns: 0.82fr 1.18fr;
+
+  align-items: center;
+
+  gap: 60px;
+
+  padding:
+    55px
+    clamp(20px, 6vw, 90px)
+    70px;
+}
+
+.hero-copy {
+  max-width: 580px;
+}
+
+.hero-lead {
+  max-width: 540px;
+
+  font-size: 15px;
+  line-height: 1.85;
+
+  color: var(--muted);
+
+  margin: 0;
+}
+
+.hero-actions {
+  display: flex;
+  align-items: center;
+
+  gap: 22px;
+
+  margin: 30px 0 22px;
+}
+
+.text-link {
+  color: var(--wine);
+
+  font-size: 11px;
+  text-decoration: none;
+
+  border-bottom: 1px solid #c9aaa0;
+
+  padding-bottom: 4px;
+}
+
+.hero-trust {
+  font-size: 10px;
+  color: #806c65;
+}
+
+.hero-trust span {
+  color: var(--sage);
+  font-weight: 700;
+
+  margin-right: 5px;
+}
+
+
+/* =========================================================
+   HERO IMAGE
+========================================================= */
+
+.hero-photo {
+  position: relative;
+
+  width: 100%;
+
+  /*
+   * Fixed ratio prevents random cropping.
+   */
+  aspect-ratio: 4 / 3;
+
+  overflow: hidden;
+
+  background: var(--rose-light);
+
+  border-radius: 6px;
+
+  box-shadow: var(--shadow);
+}
+
+.hero-photo img {
+  width: 100%;
+  height: 100%;
+
+  display: block;
+
+  /*
+   * contain prevents important parts
+   * of the image from being cut.
+   */
+  object-fit: cover;
+
+  object-position: center center;
+}
+
+
+/* PHOTO CAPTION */
+
+.photo-caption {
+  position: absolute;
+
+  left: 22px;
+  bottom: 22px;
+
+  background: rgba(255, 250, 245, 0.94);
+
+  padding: 14px 16px;
+
+  display: flex;
+  flex-direction: column;
+
+  gap: 4px;
+
+  max-width: 230px;
+
+  color: var(--wine);
+
+  box-shadow: var(--shadow-small);
+}
+
+.photo-caption b {
+  font-family: 'Playfair Display', serif;
+
+  font-size: 17px;
+  font-weight: 500;
+}
+
+.photo-caption span {
+  font-size: 9px;
+
+  letter-spacing: 0.8px;
+
+  color: #765d57;
+}
+
+
+/* =========================================================
+   EXPERIENCE STRIP
+========================================================= */
+
+.experience-strip {
+  border-top: 1px solid var(--line);
+  border-bottom: 1px solid var(--line);
+
+  padding: 18px 20px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  gap: 22px;
+
+  color: var(--wine);
+
+  font-size: 9px;
+  letter-spacing: 2px;
+
+  background: var(--paper);
+}
+
+.experience-strip b {
+  color: var(--rose-dark);
+}
+
+
+/* =========================================================
+   SECTIONS
+========================================================= */
+
+.section {
+  padding: 100px clamp(20px, 7vw, 100px);
+}
+
+.section-heading {
+  max-width: 650px;
+}
+
+.section-heading.centered {
+  text-align: center;
+
+  margin:
+    0 auto
+    55px;
+}
+
+.section-heading h2,
+.feature-copy h2,
+.coming-card h2 {
+  font-family: 'Playfair Display', serif;
+
+  font-weight: 500;
+
+  color: var(--wine);
+
+  font-size: clamp(40px, 4vw, 56px);
+
+  line-height: 1.03;
+
+  letter-spacing: -1.8px;
+
+  margin: 15px 0 17px;
+}
+
+.section-heading p,
+.feature-copy p,
+.coming-card p {
+  line-height: 1.8;
+
+  color: var(--muted);
+
+  font-size: 13px;
+}
+
+
+/* =========================================================
+   HOW IT WORKS
+========================================================= */
+
+.how {
+  background: var(--paper);
+}
+
+.flow-grid {
+  max-width: 1100px;
+
+  margin: auto;
+
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+
+  border-top: 1px solid var(--line);
+  border-left: 1px solid var(--line);
+}
+
+.flow-step {
+  min-height: 230px;
+
+  padding: 28px;
+
+  border-right: 1px solid var(--line);
+  border-bottom: 1px solid var(--line);
+
+  background: var(--paper);
+}
+
+.flow-step > span {
+  font-size: 9px;
+
+  color: var(--rose-dark);
+
+  letter-spacing: 1.5px;
+}
+
+.flow-step h3 {
+  font-family: 'Playfair Display', serif;
+
+  font-size: 23px;
+
+  font-weight: 500;
+
+  color: var(--wine);
+
+  margin: 34px 0 8px;
+}
+
+.flow-step p {
+  font-size: 11px;
+
+  line-height: 1.75;
+
+  color: #75615a;
+
+  margin: 0;
+}
+
+
+/* =========================================================
+   PRODUCT FEATURE
+========================================================= */
+
+.product-carousel-section {
+  max-width: 1450px;
+  margin: auto;
+  overflow: hidden;
+}
+
+.carousel-heading {
+  max-width: 760px;
+  margin-bottom: 42px;
+}
+
+.product-carousel {
+  position: relative;
+  width: 100%;
+  padding: 0 52px 42px;
+}
+
+.product-carousel-window {
+  overflow: hidden;
+  width: 100%;
+}
+
+.product-carousel-track {
+  display: flex;
+  width: 100%;
+  transition: transform .45s cubic-bezier(.2,.7,.2,1);
+  will-change: transform;
+}
+
+.product-carousel-slide {
+  flex: 0 0 100%;
+  min-width: 100%;
+  padding: 0 4px;
+}
+
+.product-carousel-slide .product-card {
+  max-width: 900px;
+  margin: auto;
+}
+
+.carousel-arrow {
+  position: absolute;
+  top: 42%;
+  z-index: 3;
+  width: 44px;
+  height: 44px;
+  border: 1px solid var(--line);
+  border-radius: 50%;
+  background: rgba(255,253,249,.96);
+  color: var(--wine);
+  font-size: 27px;
+  line-height: 1;
+  display: grid;
+  place-items: center;
+  box-shadow: var(--shadow-small);
+}
+
+.carousel-arrow:hover {
+  background: var(--wine);
+  color: white;
+}
+
+.carousel-prev { left: 0; }
+.carousel-next { right: 0; }
+
+.carousel-dots {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  display: flex;
+  justify-content: center;
+  gap: 7px;
+}
+
+.carousel-dots button {
+  width: 7px;
+  height: 7px;
+  padding: 0;
+  border: 0;
+  border-radius: 50%;
+  background: #d8bbb0;
+}
+
+.carousel-dots button.active {
+  width: 22px;
+  border-radius: 999px;
+  background: var(--wine);
+}
+
+.feature-copy {
+  max-width: 440px;
+}
+
+.feature-copy p {
+  margin-bottom: 28px;
+}
+
+
+/* =========================================================
+   PRODUCT CARD
+========================================================= */
+
+.product-card {
+  background: var(--white);
+
+  border: 1px solid var(--line);
+
+  box-shadow: var(--shadow);
+}
+
+.product-image {
+  display: block;
+
+  position: relative;
+
+  overflow: hidden;
+
+  background: var(--rose-light);
+
+  text-decoration: none;
+}
+
+.product-image img {
+  display: block;
+
+  width: 100%;
+
+  /*
+   * Product cards should not stretch the image.
+   */
+  aspect-ratio: 4 / 3;
+
+  height: auto;
+
+  object-fit: cover;
+
+  object-position: center;
+
+  transition: transform 0.4s ease;
+}
+
+.product-image span {
+  position: absolute;
+
+  right: 15px;
+  bottom: 15px;
+
+  background: var(--white);
+
+  padding: 10px 12px;
+
+  font-size: 10px;
+
+  color: var(--wine);
+
+  opacity: 0;
+
+  transition: opacity 0.2s ease;
+}
+
+.product-image:hover img {
+  transform: scale(1.025);
+}
+
+.product-image:hover span {
+  opacity: 1;
+}
+
+.product-info {
+  padding: 22px;
+
+  display: grid;
+
+  grid-template-columns: 1fr auto;
+
+  gap: 5px 18px;
+}
+
+.product-info small {
+  font-size: 8px;
+
+  letter-spacing: 1.7px;
+
+  color: var(--terracotta);
+}
+
+.product-info h3 {
+  font-family: 'Playfair Display', serif;
+
+  font-size: 25px;
+
+  font-weight: 500;
+
+  color: var(--wine);
+
+  margin: 6px 0;
+}
+
+.product-info > strong {
+  font-family: 'Playfair Display', serif;
+
+  font-size: 25px;
+
+  color: var(--wine);
+}
+
+.product-info p {
+  grid-column: 1 / -1;
+
+  font-size: 12px;
+
+  line-height: 1.7;
+
+  color: var(--muted);
+
+  margin: 5px 0 8px;
+}
+
+.small-btn {
+  padding: 12px 16px;
+
+  font-size: 11px;
+}
+
+
+/* =========================================================
+   COMING SOON
+========================================================= */
+
+.coming-soon {
+  background: #ead8ce;
+}
+
+.coming-card {
+  max-width: 1120px;
+
+  margin: auto;
+
+  background: var(--wine);
+
+  color: #fff8f2;
+
+  padding: 55px;
+
+  display: grid;
+
+  grid-template-columns: 1fr 0.7fr;
+
+  gap: 50px;
+
+  min-height: 360px;
+
+  align-items: center;
+}
+
+.coming-card .eyebrow {
+  color: #e8b6a8;
+}
+
+.coming-card h2 {
+  color: #fff8f2;
+}
+
+.coming-card p {
+  color: #eadbd4;
+
+  max-width: 550px;
+}
+
+.coming-pill {
+  display: inline-block;
+
+  border: 1px solid rgba(255, 255, 255, 0.3);
+
+  padding: 10px 13px;
+
+  font-size: 9px;
+
+  letter-spacing: 1.6px;
+
+  margin-top: 12px;
+}
+
+.coming-visual {
+  height: 250px;
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  overflow: hidden;
+  background: #f0e5dc;
+}
+
+.coming-visual img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  object-position: center;
+}
+
+/* =========================================================
+   SHOP
+========================================================= */
+
+.grid {
+  display: grid;
+
+  grid-template-columns:
+    repeat(
+      auto-fit,
+      minmax(290px, 1fr)
+    );
+
+  gap: 25px;
+
+  margin-top: 48px;
+}
+
+.page {
+  max-width: 1300px;
+
+  margin: auto;
+
+  padding:
+    85px
+    clamp(20px, 7vw, 100px);
+}
+
+.shop-page h1 {
+  max-width: 800px;
+}
+
+.page-intro {
+  max-width: 650px;
+
+  color: var(--muted);
+
+  line-height: 1.8;
+
+  font-size: 13px;
+}
+
+
+/* =========================================================
+   PRODUCT PAGE
+========================================================= */
+
+.product-page {
+  max-width: 1450px;
+
+  margin: auto;
+
+  padding:
+    70px
+    clamp(20px, 7vw, 100px);
+
+  display: grid;
+
+  grid-template-columns:
+    1.05fr
+    0.8fr;
+
+  gap: 80px;
+
+  align-items: start;
+
+  background: var(--cream);
+}
+
+
+/* PRODUCT GALLERY */
+
+.product-gallery {
+  position: sticky;
+
+  top: 105px;
+}
+
+
+/* MAIN IMAGE */
+
+.gallery-main {
+  position: relative;
+
+  background: var(--rose-light);
+
+  overflow: hidden;
+
+  border: 1px solid var(--line);
+}
+
+.gallery-main img {
+  display: block;
+
+  width: 100%;
+
+  /*
+   * Keep a consistent product presentation.
+   */
+  aspect-ratio: 1 / 1;
+
+  height: auto;
+
+  /*
+   * Product photos should not be distorted.
+   */
+  object-fit: contain;
+
+  object-position: center;
+
+  background: #f0e5dc;
+}
+
+
+/* GALLERY ARROWS */
+
+.gallery-arrow {
+  position: absolute;
+
+  top: 50%;
+
+  transform: translateY(-50%);
+
+  border: 0;
+
+  background: rgba(255, 253, 249, 0.94);
+
+  color: var(--wine);
+
+  width: 42px;
+  height: 42px;
+
+  border-radius: 50%;
+
+  font-size: 25px;
+
+  display: grid;
+  place-items: center;
+
+  box-shadow: var(--shadow-small);
+
+  transition:
+    background 0.2s ease,
+    transform 0.2s ease;
+}
+
+.gallery-arrow:hover {
+  background: white;
+
+  transform:
+    translateY(-50%)
+    scale(1.04);
+}
+
+.gallery-arrow.left {
+  left: 14px;
+}
+
+.gallery-arrow.right {
+  right: 14px;
+}
+
+
+/* IMAGE COUNT */
+
+.gallery-count {
+  position: absolute;
+
+  right: 16px;
+  bottom: 16px;
+
+  background: rgba(255, 253, 249, 0.94);
+
+  padding: 7px 9px;
+
+  font-size: 9px;
+
+  color: var(--wine);
+}
+
+
+/* =========================================================
+   GALLERY THUMBNAILS
+========================================================= */
+
+.gallery-thumbs {
+  display: grid;
+
+  grid-template-columns:
+    repeat(4, 1fr);
+
+  gap: 8px;
+
+  margin-top: 10px;
+}
+
+.gallery-thumbs button {
+  padding: 0;
+
+  border: 1px solid transparent;
+
+  background: var(--rose-light);
+
+  overflow: hidden;
+}
+
+.gallery-thumbs button:hover {
+  border-color: var(--rose-dark);
+}
+
+.gallery-thumbs button.active {
+  border-color: var(--wine);
+}
+
+.gallery-thumbs img {
+  display: block;
+
+  width: 100%;
+
+  aspect-ratio: 1 / 1;
+
+  height: auto;
+
+  object-fit: cover;
+}
+
+
+/* =========================================================
+   PRODUCT DETAILS
+========================================================= */
+
+.product-details {
+  padding-top: 12px;
+}
+
+.product-details h1 {
+  font-size: clamp(45px, 5vw, 64px);
+
+  margin-bottom: 15px;
+}
+
+.price {
+  font-family: 'Playfair Display', serif;
+
+  font-size: 35px;
+
+  color: var(--wine);
+
+  margin-bottom: 15px;
+}
+
+.product-description {
+  font-size: 14px;
+
+  line-height: 1.85;
+
+  color: var(--muted);
+
+  max-width: 550px;
+}
+
+.buy-points {
+  display: flex;
+
+  flex-direction: column;
+
+  gap: 9px;
+
+  margin: 24px 0;
+
+  color: #65534e;
+
+  font-size: 11px;
+}
+
+.included {
+  margin: 30px 0;
+}
+
+.included h3 {
+  font-family: 'Playfair Display', serif;
+
+  font-size: 23px;
+
+  font-weight: 500;
+
+  color: var(--wine);
+}
+
+.included-grid {
+  display: grid;
+
+  grid-template-columns: 1fr 1fr;
+
+  gap: 8px;
+}
+
+.included-grid span {
+  padding: 12px;
+
+  background: #f2e2d8;
+
+  font-size: 11px;
+
+  color: #634e48;
+}
+
+.buy-btn {
+  width: 100%;
+
+  max-width: 430px;
+
+  margin-top: 8px;
+}
+
+.product-note {
+  font-size: 9px;
+
+  color: #8a756e;
+
+  margin-top: 12px;
+}
+
+
+/* =========================================================
+   MOBILE PRODUCT BUY BAR
+========================================================= */
+
+.mobile-buy {
+  display: none;
+}
+
+
+/* =========================================================
+   CART
+========================================================= */
+
+.cart-layout {
+  display: grid;
+
+  grid-template-columns:
+    1.35fr
+    0.65fr;
+
+  gap: 60px;
+
+  margin-top: 45px;
+}
+
+.cart-row {
+  display: flex;
+
+  gap: 20px;
+
+  padding: 20px 0;
+
+  border-bottom: 1px solid var(--line);
+}
+
+.cart-row img {
+  width: 140px;
+  height: 140px;
+
+  object-fit: cover;
+
+  background: var(--rose-light);
+}
+
+.cart-main {
+  flex: 1;
+}
+
+.cart-main small {
+  font-size: 8px;
+
+  color: var(--terracotta);
+
+  letter-spacing: 1.4px;
+}
+
+.cart-main h3 {
+  font-family: 'Playfair Display', serif;
+
+  font-size: 22px;
+
+  font-weight: 500;
+
+  color: var(--wine);
+
+  margin: 7px 0;
+}
+
+.cart-main > b {
+  font-family: 'Playfair Display', serif;
+
+  font-size: 18px;
+}
+
+.qty {
+  display: flex;
+
+  align-items: center;
+
+  gap: 9px;
+
+  margin-top: 15px;
+}
+
+.qty button {
+  border: 1px solid var(--line);
+
+  background: var(--white);
+
+  width: 30px;
+  height: 30px;
+
+  color: var(--wine);
+}
+
+.qty .remove {
+  border: 0;
+
+  background: none;
+
+  width: auto;
+
+  text-decoration: underline;
+
+  font-size: 10px;
+}
+
+
+/* =========================================================
+   ORDER SUMMARY
+========================================================= */
+
+.summary {
+  background: var(--wine);
+
+  color: #fff7ef;
+
+  padding: 30px;
+
+  align-self: start;
+}
+
+.summary .eyebrow {
+  color: #e5b2a5;
+}
+
+.summary h3 {
+  font-family: 'Playfair Display', serif;
+
+  font-size: 26px;
+
+  font-weight: 500;
+}
+
+.summary > div:not(.eyebrow) {
+  display: flex;
+
+  justify-content: space-between;
+
+  gap: 20px;
+
+  padding: 11px 0;
+
+  font-size: 11px;
+}
+
+.summary hr {
+  border: 0;
+
+  border-top:
+    1px solid
+    rgba(255, 255, 255, 0.2);
+}
+
+.summary .total strong {
+  font-family: 'Playfair Display', serif;
+
+  font-size: 25px;
+}
+
+.summary .primary-btn {
+  width: 100%;
+
+  margin-top: 18px;
+
+  background: #f0c3b3;
+
+  color: var(--wine);
+}
+
+
+/* =========================================================
+   EMPTY STATE
+========================================================= */
+
+.empty {
+  text-align: center;
+
+  padding: 90px 20px;
+}
+
+.empty > div {
+  font-size: 50px;
+
+  color: var(--rose-dark);
+}
+
+
+/* =========================================================
+   AUTH
+========================================================= */
+
+.auth-page {
+  min-height: 700px;
+
+  display: grid;
+
+  grid-template-columns: 1fr 1fr;
+
+  background: var(--paper);
+}
+
+.auth-art {
+  background: #7a5551;
+
+  color: #fff6ee;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  position: relative;
+
+  overflow: hidden;
+}
+
+.auth-art::before {
+  content: '';
+
+  position: absolute;
+
+  width: 500px;
+  height: 500px;
+
+  border-radius: 50%;
+
+  background: #8e645d;
+
+  right: -180px;
+  top: -150px;
+}
+
+.auth-quote {
+  font-family: 'Playfair Display', serif;
+
+  font-size: 47px;
+
+  line-height: 1.05;
+
+  text-align: center;
+
+  position: relative;
+
+  z-index: 2;
+}
+
+.auth-art > span {
+  position: absolute;
+
+  bottom: 30px;
+
+  font-family: 'DM Sans', sans-serif;
+
+  font-size: 20px;
+
+  font-weight: 600;
+}
+
+.auth-form {
+  width: min(480px, 86%);
+
+  margin: auto;
+}
+
+.auth-form h1 {
+  font-family: 'Playfair Display', serif;
+
+  font-size: 48px;
+
+  font-weight: 500;
+
+  line-height: 1.05;
+
+  color: var(--wine);
+
+  margin: 15px 0;
+}
+
+.auth-form > p {
+  color: var(--muted);
+
+  font-size: 12px;
+
+  line-height: 1.7;
+}
+
+.auth-form > form {
+  display: flex;
+
+  flex-direction: column;
+}
+
+.auth-form input {
+  width: 100%;
+
+  padding: 14px;
+
+  border: 1px solid var(--line);
+
+  background: white;
+
+  color: var(--ink);
+
+  margin: 5px 0;
+
+  outline: none;
+}
+
+.auth-form input:focus {
+  border-color: var(--rose-dark);
+}
+
+.auth-form form .primary-btn {
+  margin-top: 9px;
+}
+
+.google-btn {
+  width: 100%;
+
+  border: 1px solid var(--line);
+
+  background: white;
+
+  padding: 13px;
+
+  color: #302a28;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  gap: 10px;
+
+  font-size: 12px;
+
+  font-weight: 600;
+}
+
+.google-g {
+  font-weight: 700;
+
+  font-size: 16px;
+}
+
+.or {
+  display: flex;
+
+  align-items: center;
+
+  gap: 10px;
+
+  color: #9a8881;
+
+  font-size: 9px;
+
+  margin: 18px 0;
+}
+
+.or::before,
+.or::after {
+  content: '';
+
+  height: 1px;
+
+  background: var(--line);
+
+  flex: 1;
+}
+
+.auth-switch {
+  font-size: 10px !important;
+
+  margin-top: 20px;
+
+  text-align: center;
+}
+
+.auth-switch a {
+  color: var(--wine);
+
+  font-weight: 700;
+}
+
+
+/* =========================================================
+   ORDERS
+========================================================= */
+
+.orders-page {
+  min-height: 600px;
+}
+
+.order-card {
+  background: var(--white);
+
+  border: 1px solid var(--line);
+
+  padding: 22px;
+
+  margin: 15px 0;
+
+  display: grid;
+
+  grid-template-columns: 1fr auto;
+
+  gap: 4px 20px;
+}
+
+.order-card small {
+  font-size: 8px;
+}
+
+.order-card h3 {
+  font-family: 'Playfair Display', serif;
+
+  font-size: 22px;
+
+  color: var(--wine);
+
+  margin: 6px 0;
+}
+
+.order-card > strong {
+  font-family: 'Playfair Display', serif;
+
+  font-size: 22px;
+
+  color: var(--rose-dark);
+}
+
+.order-card p {
+  grid-column: 1 / -1;
+
+  color: var(--muted);
+
+  font-size: 11px;
+}
+
+
+/* =========================================================
+   LOADING
+========================================================= */
+
+.loading {
+  text-align: center;
+
+  min-height: 600px;
+
+  padding-top: 180px;
+
+  font-family: 'Playfair Display', serif;
+
+  font-size: 28px;
+}
+
+
+/* =========================================================
+   FOOTER
+========================================================= */
+
+.footer {
+  background: var(--wine);
+
+  color: #fbece2;
+
+  padding:
+    50px
+    clamp(20px, 7vw, 100px);
+
+  display: flex;
+
+  justify-content: space-between;
+
+  align-items: end;
+
+  gap: 30px;
+}
+
+.footer-brand {
+  font-family: 'DM Sans', sans-serif;
+
+  font-size: 27px;
+
+  font-weight: 700;
+}
+
+.footer p {
+  font-size: 9px;
+
+  letter-spacing: 1.5px;
+
+  text-transform: uppercase;
+
+  margin: 8px 0 0;
+
+  color: #e8c1b3;
+}
+
+.footer-copy {
+  font-family: 'Playfair Display', serif;
+
+  font-style: italic;
+
+  font-size: 18px;
+
+  max-width: 390px;
+
+  text-align: right;
+
+  color: #f2d5ca;
+}
+
+
+/* =========================================================
+   TABLET
+========================================================= */
+
+
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+
+
+/* =========================================================
+   INIYO LOGO V2 Ã¢â‚¬â€ intentionally unique selectors
+   ========================================================= */
+.brand .iniyo-logo-v2,
+.footer-brand .iniyo-logo-v2 {
+  position: relative;
+  display: inline-block;
+  font-family: 'Playfair Display', serif;
+  font-size: 31px;
+  line-height: .9;
+  font-weight: 600;
+  letter-spacing: -1.8px;
+  color: var(--wine);
+  text-transform: lowercase;
+}
+
+.brand .iniyo-logo-v2::after,
+.footer-brand .iniyo-logo-v2::after {
+  content: '';
+  position: absolute;
+  left: 1px;
+  right: -2px;
+  bottom: -6px;
+  height: 1px;
+  background: var(--rose);
+  transform: rotate(-2deg);
+}
+
+.brand .iniyo-logo-v2 .brand-heart,
+.footer-brand .iniyo-logo-v2 .brand-heart {
+  top: -12px;
+  left: 22px;
+  font-size: 11px;
+  color: var(--rose-dark);
+  transform: rotate(-8deg);
+}
+
+/* Make sure local public images always display as images, not empty skeletons. */
+.hero-photo img,
+.product-image img,
+.gallery-main img,
+.gallery-thumbs img,
+.cart-row img {
+  display: block;
+}
+
+/* Carousel card image is deliberately prominent. */
+
+
+
+/* =========================================================
+   FOOTER INIYO LOGO Ã¢â‚¬â€ LIGHTER
+   ========================================================= */
+
+.footer .footer-brand .iniyo-logo-v2 {
+  color: #f7c8b5 !important;
+}
+
+.footer .footer-brand .iniyo-logo-v2 .brand-heart {
+  color: #ffe0d2 !important;
+}
+
+.footer .footer-brand .iniyo-logo-v2::after {
+  background: #f7c8b5 !important;
+}
+
+/* Footer tagline is intentionally hidden.
+   The header tagline is not affected. */
+.footer .footer-brand .brand-tagline {
+  display: none !important;
+}
+
+/* =========================================================
+   FOOTER LOVE LINE
+   ========================================================= */
+
+.footer-love {
+  width: 100%;
+  text-align: center;
+  margin-top: 2px;
+  padding-top: 0px;
+  border-top: 1px solid rgba(255, 255, 255, 0.14);
+  font-family: 'DM Sans', sans-serif;
+  font-size: 13px;
+  font-weight: 500;
+  letter-spacing: 0.4px;
+  color: #eacfc3;
+}
+
+.footer-love {
+  margin-top: 3px;
+  padding-top: 3px;
+  border-top: 1px solid rgba(255, 255, 255, 0.14);
+}
+
+/* Mobile footer */
+
+
+/* =========================================================
+   INIYO Ã¢â‚¬â€ MOBILE UX REFINEMENT
+   Keeps the existing fonts, colors and visual language.
+   Only changes mobile layout, sizing, spacing and interaction.
+========================================================= */
+
+
+
+/* Small phones: preserve breathing room instead of shrinking everything. */
+
+
+
+
+/* =========================================================
+   INIYO MOBILE REDESIGN Ã¢â‚¬â€ v2
+   Keeps existing colors, fonts and visual language.
+   Mobile layout is intentionally rebuilt rather than scaled.
+========================================================= */
+
+
+
+/* Tiny phones: keep the 2-column shopping layout but prevent cramped controls. */
+
+
+
+@keyframes iniyoMobileUp { from { opacity:0; transform:translateY(12px); } to { opacity:1; transform:none; } }
+@keyframes iniyoMobileImage { from { opacity:0; transform:scale(.98); } to { opacity:1; transform:scale(1); } }
+
+
+/* =========================================================
+   MOBILE PRODUCT CAROUSEL Ã¢â‚¬â€ TRUE ONE-BY-ONE SWIPE
+   Desktop remains unchanged. Mobile is a real horizontal
+   card slider, not a desktop card squeezed into the screen.
+========================================================= */
+
+
+
+
+/* =========================================================
+   MOBILE-FIRST INIYO FLOW Ã¢â‚¬â€ FINAL OVERRIDES
+   These rules intentionally rebuild the phone layout.
+   Desktop styles remain unchanged.
+========================================================= */
+
+
+
+
+
+/* =========================================================
+   MOBILE HOW-IT-WORKS Ã¢â‚¬â€ TEXT ONLY
+   The intro and each swipe slide contain no product image.
+========================================================= */
+
+
+/* Header INIYO wordmark: dotless first i + heart replacing second i */
+.brand .header-iniyo-logo .brand-heart {
+  position: static;
+  display: inline-block;
+  margin: 0 1px;
+  font-size: .72em;
+  line-height: 1;
+  color: var(--rose-dark);
+  transform: none;
+  vertical-align: .08em;
+}
+
+
+/* Header wordmark: keep first i normal; replace the second i dot with a heart above it. */
+.brand .header-iniyo-logo .brand-heart {
+  display: none !important;
+}
+
+.brand .header-iniyo-logo .heart-i {
+  position: relative;
+  display: inline-block;
+  line-height: 1;
+}
+
+.brand .header-iniyo-logo .heart-i-mark {
+  position: absolute;
+  left: 50%;
+  top: -0.48em;
+  transform: translateX(-50%);
+  font-size: 0.52em;
+  line-height: 1;
+  color: var(--rose-dark);
+}
+
+
+
+/* =========================================================
+   MOBILE HERO Ã¢â‚¬â€ IMAGE BANNER FIRST
+   Desktop layout remains unchanged.
+========================================================= */
+
+
+/* =========================================================
+   FINAL MOBILE HERO OVERRIDE
+   Applies through 900px so device/emulated mobile widths
+   cannot fall back to the desktop two-column hero.
+========================================================= */
+
+/* Desktop accessibility motion setting. */
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: .01ms !important;
+    animation-iteration-count: 1 !important;
+    scroll-behavior: auto !important;
+    transition-duration: .01ms !important;
+  }
+}
+
+/* =========================================================
+   INIYO FOOTER Ã¢â‚¬â€ CENTERED
+========================================================= */
+.footer {
+  display: flex !important;
+  flex-direction: column !important;
+  align-items: center !important;
+  justify-content: center !important;
+  text-align: center !important;
+}
+
+.footer > div:first-child {
+  width: 100% !important;
+  text-align: center !important;
+}
+
+.footer-brand {
+  width: 100% !important;
+  text-align: center !important;
+}
+
+.footer p {
+  text-align: center !important;
+  margin-left: auto !important;
+  margin-right: auto !important;
+}
+
+
+/* =========================================================
+   INIYO EXPERIENCE Ã¢â‚¬â€ TWO PRODUCT CAROUSEL
+   Desktop image sizing: keep the full product visible and
+   prevent the first product image from becoming oversized.
+========================================================= */
+@media (min-width: 901px) {
+  .product-carousel-section {
+    max-width: 1450px;
+    overflow: hidden;
+  }
+
+  .mobile-showcase-group {
+    width: 100%;
+  }
+
+  .showcase-title {
+    max-width: 760px;
+    margin: 0 auto 22px;
+  }
+
+  .showcase-title h3 {
+    margin: 8px 0 0;
+    font-family: 'Playfair Display', serif;
+    font-size: 30px;
+    line-height: 1.12;
+    font-weight: 500;
+    color: var(--wine);
+  }
+
+  .product-carousel {
+    width: 100%;
+    padding: 0 64px 42px;
+  }
+
+  .product-carousel-window {
+    width: 100%;
+    overflow: hidden;
+  }
+
+  .product-carousel-slide .product-card {
+    width: 100%;
+    max-width: 760px;
+    margin: 0 auto;
+  }
+
+  .product-carousel-slide .product-image {
+    width: 100%;
+    height: 390px;
+    background: var(--rose-light);
+  }
+
+  .product-carousel-slide .product-image img {
+    width: 100%;
+    height: 100%;
+    min-height: 0 !important;
+    aspect-ratio: auto !important;
+    object-fit: contain !important;
+    object-position: center;
+    padding: 22px;
+  }
+
+  .product-carousel-slide .product-info {
+    padding: 24px 26px;
+  }
+
+  .product-carousel-slide .product-info h3 {
+    font-size: 25px;
+  }
+
+  .product-carousel-slide .product-info p {
+    max-width: 620px;
+  }
+}
+
+/* Coming-soon product is part of the same two-slide carousel. */
+.product-card.is-coming-soon .product-image {
+  cursor: default;
+}
+
+.product-card.is-coming-soon .coming-price {
+  color: var(--rose-dark);
+  font-size: 11px;
+  letter-spacing: 1.3px;
+  text-transform: uppercase;
+}
+
+.product-card.is-coming-soon .coming-soon-btn {
+  cursor: default;
+  opacity: .72;
+}
+
+/* The experience section has only one carousel: Couple + Sibling. */
+.sibling-showcase-title {
+  display: none !important;
+}
+
+/* =========================================================
+   SHOP Ã¢â‚¬â€ MATCH THE INIYO EXPERIENCE CARD STYLE
+   Same clean product presentation as the homepage carousel.
+========================================================= */
+.shop-page .grid {
+  align-items: start;
+  justify-items: center;
+}
+
+.shop-page .grid .product-card {
+  width: 100%;
+  max-width: 620px;
+  background: var(--white);
+  border: 1px solid var(--line);
+  box-shadow: var(--shadow-small);
+}
+
+.shop-page .grid .product-image {
+  width: 100%;
+  height: 330px;
+  background: transparent !important;
+  border: 0 !important;
+  box-shadow: none !important;
+}
+
+.shop-page .grid .product-image img {
+  width: 100%;
+  height: 100%;
+  min-height: 0 !important;
+  aspect-ratio: auto !important;
+  object-fit: contain !important;
+  object-position: center;
+  padding: 18px;
+  background: transparent !important;
+}
+
+.shop-page .grid .product-info {
+  padding: 24px 26px;
+}
+
+.shop-page .grid .product-info h3 {
+  font-size: 25px;
+  line-height: 1.15;
+}
+
+/* Coming-soon shop image uses exactly the same clean treatment. */
+.shop-page .grid .product-card.is-coming-soon .product-image {
+  background: transparent !important;
+}
+
+@media (min-width: 901px) {
+  .shop-page .grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 28px;
+  }
+}
+
+/* =========================================================
+   INIYO Ã¢â‚¬â€ SUBTLE INTERACTION ANIMATIONS
+========================================================= */
+
+.home-page {
+  position: relative;
+}
+
+.home-petal-shower {
+  position: fixed;
+  inset: 0;
+  z-index: 30;
+  pointer-events: none;
+  overflow: hidden;
+}
+
+.home-petal {
+  position: absolute;
+  top: -28px;
+  display: block;
+  font-family: Georgia, serif;
+  font-size: 15px;
+  line-height: 1;
+  color: var(--rose-dark);
+  opacity: 0;
+  animation-name: iniyoPetalFall;
+  animation-timing-function: ease-in;
+  animation-fill-mode: both;
+}
+
+.home-petal:nth-child(even) {
+  color: var(--wine);
+  font-size: 13px;
+}
+
+@keyframes iniyoPetalFall {
+  0% {
+    transform: translate3d(0, -20px, 0) rotate(0deg) scale(.7);
+    opacity: 0;
+  }
+  12% {
+    opacity: .65;
+  }
+  72% {
+    opacity: .45;
+  }
+  100% {
+    transform: translate3d(18px, 92vh, 0) rotate(var(--petal-rotate)) scale(1);
+    opacity: 0;
+  }
+}
+
+button,
+.primary-btn,
+.text-link,
+a {
+  -webkit-tap-highlight-color: transparent;
+}
+
+button:not(:disabled),
+.primary-btn,
+.text-link {
+  transition: transform .16s ease, opacity .16s ease, box-shadow .16s ease;
+}
+
+button:not(:disabled):active,
+.primary-btn:active,
+.text-link:active {
+  transform: scale(.97);
+}
+
+.ini-press-ripple {
+  position: absolute;
+  width: 12px;
+  height: 12px;
+  border-radius: 999px;
+  pointer-events: none;
+  background: rgba(255,255,255,.58);
+  transform: translate(-50%, -50%) scale(0);
+  animation: iniyoButtonRipple .5s ease-out forwards;
+}
+
+@keyframes iniyoButtonRipple {
+  0% {
+    opacity: .75;
+    transform: translate(-50%, -50%) scale(0);
+  }
+  100% {
+    opacity: 0;
+    transform: translate(-50%, -50%) scale(8);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .home-petal,
+  .ini-press-ripple {
+    animation: none !important;
+  }
+
+  button,
+  .primary-btn,
+  .text-link {
+    transition: none !important;
+  }
+}
+
+
+/* =========================================================
+   INIYO MICRO INTERACTIONS Ã¢â‚¬â€ BAG + PAYMENT
+========================================================= */
+
+.action-fx {
+  position: fixed;
+  inset: 0;
+  z-index: 9999;
+  pointer-events: none;
+  display: grid;
+  place-items: center;
+}
+
+.action-fx-bag {
+  animation: fxOverlayFade .85s ease both;
+}
+
+.bag-fx-icon {
+  width: 76px;
+  height: 76px;
+  display: grid;
+  place-items: center;
+  border-radius: 50%;
+  background: var(--white);
+  border: 1px solid var(--line);
+  box-shadow: 0 14px 40px rgba(80, 36, 43, .14);
+  color: var(--wine);
+  font-size: 34px;
+  animation: bagPop .72s cubic-bezier(.2,.8,.2,1) both;
+}
+
+.action-fx-bag > span {
+  position: absolute;
+  margin-top: 128px;
+  font-size: 13px;
+  letter-spacing: .02em;
+  color: var(--wine-dark);
+  background: var(--white);
+  border: 1px solid var(--line);
+  padding: 9px 15px;
+  border-radius: 999px;
+  box-shadow: 0 8px 25px rgba(80, 36, 43, .10);
+  animation: bagText .85s ease both;
+}
+
+.bag-fx-spark {
+  position: absolute;
+  color: var(--rose-dark);
+  font-style: normal;
+  font-size: 15px;
+  animation: bagSpark .8s ease-out both;
+}
+.spark-1 { transform: translate(-48px,-34px); animation-delay: .03s; }
+.spark-2 { transform: translate(50px,-25px); animation-delay: .08s; }
+.spark-3 { transform: translate(44px,35px); animation-delay: .13s; }
+
+.action-fx-payment {
+  background: rgba(255,255,255,.28);
+  backdrop-filter: blur(2px);
+  animation: fxOverlayFade 1.15s ease both;
+}
+
+.payment-fx-card {
+  width: min(310px, calc(100vw - 48px));
+  padding: 28px 24px 25px;
+  text-align: center;
+  border: 1px solid var(--line);
+  border-radius: 20px;
+  background: var(--white);
+  box-shadow: 0 18px 55px rgba(80, 36, 43, .15);
+  animation: paymentPop 1.05s cubic-bezier(.2,.8,.2,1) both;
+}
+
+.payment-fx-check {
+  width: 48px;
+  height: 48px;
+  margin: 0 auto 13px;
+  display: grid;
+  place-items: center;
+  border-radius: 50%;
+  background: var(--rose-light);
+  color: var(--wine);
+  font-size: 24px;
+  animation: checkDraw .55s .12s ease both;
+}
+
+.payment-fx-card strong,
+.payment-fx-card span {
+  display: block;
+}
+
+.payment-fx-card strong {
+  color: var(--ink);
+  font-size: 17px;
+}
+
+.payment-fx-card span {
+  margin-top: 5px;
+  color: var(--muted);
+  font-size: 12px;
+}
+
+@keyframes fxOverlayFade {
+  0% { opacity: 0; }
+  12% { opacity: 1; }
+  78% { opacity: 1; }
+  100% { opacity: 0; }
+}
+
+@keyframes bagPop {
+  0% { transform: scale(.45) translateY(12px); opacity: 0; }
+  55% { transform: scale(1.08) translateY(0); opacity: 1; }
+  100% { transform: scale(1); opacity: 1; }
+}
+
+@keyframes bagText {
+  0% { opacity: 0; transform: translateY(10px); }
+  35% { opacity: 1; transform: translateY(0); }
+  100% { opacity: 0; transform: translateY(-5px); }
+}
+
+@keyframes bagSpark {
+  0% { opacity: 0; transform: scale(.4); }
+  30% { opacity: 1; }
+  100% { opacity: 0; transform: scale(1.15) translateY(-18px); }
+}
+
+@keyframes paymentPop {
+  0% { opacity: 0; transform: translateY(18px) scale(.94); }
+  35% { opacity: 1; transform: translateY(0) scale(1.02); }
+  100% { opacity: 1; transform: translateY(0) scale(1); }
+}
+
+@keyframes checkDraw {
+  0% { transform: scale(.5) rotate(-10deg); opacity: 0; }
+  65% { transform: scale(1.12) rotate(2deg); opacity: 1; }
+  100% { transform: scale(1) rotate(0); opacity: 1; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .action-fx,
+  .bag-fx-icon,
+  .action-fx-bag > span,
+  .bag-fx-spark,
+  .payment-fx-card,
+  .payment-fx-check {
+    animation-duration: .01ms !important;
+    animation-iteration-count: 1 !important;
+  }
+}
+
+/* =========================================================
+   INIYO Ã¢â‚¬â€ ACCOUNT / PROFILE UI FIX
+   Functional account controls use the existing INIYO visual
+   language: cream, paper, wine, rose and fine line borders.
+========================================================= */
+
+.account-wrapper {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.account-button {
+  appearance: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 9px;
+  min-height: 40px;
+  padding: 5px 8px 5px 5px;
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  background: var(--white);
+  color: var(--ink);
+  font: inherit;
+  cursor: pointer;
+  transition: border-color .2s ease, background .2s ease, box-shadow .2s ease;
+}
+
+.account-button:hover,
+.account-button:focus-visible {
+  border-color: var(--rose);
+  background: var(--paper);
+  box-shadow: 0 8px 22px rgba(83, 46, 42, .08);
+  outline: none;
+}
+
+.account-avatar {
+  width: 29px;
+  height: 29px;
+  flex: 0 0 29px;
+  display: inline-grid;
+  place-items: center;
+  border-radius: 50%;
+  background: var(--rose-light);
+  color: var(--wine);
+  font-size: 11px;
+  font-weight: 700;
+}
+
+.account-name {
+  max-width: 150px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  color: var(--wine);
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.account-arrow {
+  color: var(--muted);
+  font-size: 12px;
+  line-height: 1;
+  transform: translateY(-1px);
+}
+
+.account-dropdown {
+  position: absolute;
+  top: calc(100% + 12px);
+  right: 0;
+  width: 270px;
+  padding: 8px;
+  border: 1px solid var(--line);
+  border-radius: 16px;
+  background: var(--paper);
+  box-shadow: 0 20px 55px rgba(83, 46, 42, .16);
+  z-index: 1000;
+  animation: accountMenuIn .16s ease-out;
+}
+
+@keyframes accountMenuIn {
+  from { opacity: 0; transform: translateY(-5px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.account-info {
+  padding: 13px 13px 12px;
+}
+
+.account-info-name {
+  color: var(--wine);
+  font-family: 'Playfair Display', serif;
+  font-size: 19px;
+  line-height: 1.1;
+}
+
+.account-info-email {
+  margin-top: 5px;
+  color: var(--muted);
+  font-size: 10px;
+  line-height: 1.5;
+  overflow-wrap: anywhere;
+}
+
+.dropdown-divider {
+  height: 1px;
+  margin: 3px 6px;
+  background: var(--line);
+}
+
+.account-dropdown a,
+.account-dropdown .dropdown-logout {
+  width: 100%;
+  min-height: 42px;
+  display: flex;
+  align-items: center;
+  padding: 0 13px;
+  border: 0;
+  border-radius: 10px;
+  background: transparent;
+  color: var(--ink);
+  text-decoration: none;
+  text-align: left;
+  font: inherit;
+  font-size: 12px;
+  font-weight: 600;
+  cursor: pointer;
+  box-sizing: border-box;
+}
+
+.account-dropdown a:hover,
+.account-dropdown a:focus-visible,
+.account-dropdown .dropdown-logout:hover,
+.account-dropdown .dropdown-logout:focus-visible {
+  background: var(--cream);
+  outline: none;
+}
+
+.account-dropdown .dropdown-logout {
+  color: var(--rose-dark);
+}
+
+/* PROFILE */
+.profile-page {
+  width: min(900px, calc(100% - 40px));
+  min-height: 680px;
+  margin: 0 auto;
+  padding: 76px 0;
+}
+
+.profile-card {
+  width: min(650px, 100%);
+  margin: 0 auto;
+  padding: 34px;
+  background: var(--paper);
+  border: 1px solid var(--line);
+  border-radius: 18px;
+  box-shadow: var(--shadow);
+}
+
+.profile-header {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  padding-bottom: 27px;
+  border-bottom: 1px solid var(--line);
+}
+
+.profile-header .profile-avatar {
+  width: 64px;
+  height: 64px;
+  flex: 0 0 64px;
+  margin: 0;
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+  background: var(--rose-light);
+  color: var(--wine);
+  font-size: 24px;
+  font-weight: 700;
+}
+
+.profile-header h1 {
+  margin: 0 0 5px;
+  color: var(--wine);
+  font-family: 'Playfair Display', serif;
+  font-size: 34px;
+  line-height: 1.05;
+  letter-spacing: -1px;
+}
+
+.profile-header p {
+  margin: 0;
+  color: var(--muted);
+  font-size: 11px;
+}
+
+.auth-error,
+.auth-success {
+  margin-top: 18px;
+  padding: 11px 13px;
+  border-radius: 9px;
+  font-size: 11px;
+  line-height: 1.5;
+}
+
+.auth-error {
+  color: #8f3434;
+  background: #fff4f2;
+  border: 1px solid #e7c4bd;
+}
+
+.auth-success {
+  color: #56705b;
+  background: #f2f6f0;
+  border: 1px solid #cddbc9;
+}
+
+.profile-fields {
+  margin-top: 10px;
+}
+
+.profile-field {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+  min-height: 72px;
+  padding: 15px 0;
+  border-bottom: 1px solid var(--line);
+}
+
+.profile-field label {
+  flex: 0 0 80px;
+  color: var(--terracotta);
+  font-size: 9px;
+  font-weight: 700;
+  letter-spacing: 1.6px;
+  text-transform: uppercase;
+}
+
+.profile-field > span,
+.profile-email {
+  flex: 1;
+  min-width: 0;
+  color: var(--ink);
+  font-size: 13px;
+  text-align: right;
+}
+
+.profile-field input {
+  flex: 1;
+  min-width: 0;
+  width: 100%;
+  padding: 11px 12px;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  background: var(--white);
+  color: var(--ink);
+  outline: none;
+  font-size: 12px;
+  text-align: right;
+}
+
+.profile-field input:focus {
+  border-color: var(--rose-dark);
+  box-shadow: 0 0 0 3px rgba(216, 155, 145, .14);
+}
+
+.profile-email {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 9px;
+  flex-wrap: wrap;
+}
+
+.verified {
+  color: #56705b;
+  font-size: 9px;
+  white-space: nowrap;
+}
+
+.profile-actions {
+  display: flex;
+  gap: 10px;
+  margin-top: 25px;
+}
+
+.profile-actions button,
+.profile-links button {
+  min-height: 43px;
+  padding: 0 17px;
+  border-radius: 999px;
+  border: 1px solid var(--line);
+  background: var(--white);
+  color: var(--ink);
+  font: inherit;
+  font-size: 11px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.profile-actions button:first-child {
+  border-color: var(--wine);
+  background: var(--wine);
+  color: #fffaf6;
+}
+
+.profile-actions button:first-child:hover {
+  background: var(--wine-dark);
+}
+
+.profile-actions .secondary {
+  background: transparent;
+}
+
+.profile-links {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  margin-top: 24px;
+  padding-top: 20px;
+  border-top: 1px solid var(--line);
+}
+
+.profile-links button {
+  min-height: auto;
+  padding: 5px 0;
+  border: 0;
+  background: transparent;
+  color: var(--wine);
+}
+
+.profile-links .logout-button {
+  color: var(--rose-dark);
+}
+
+@media (max-width: 900px) {
+  .account-button {
+    min-height: 36px;
+    padding-right: 7px;
+  }
+
+  .account-name {
+    max-width: 92px;
+    font-size: 10px;
+  }
+
+  .account-dropdown {
+    position: fixed;
+    top: 72px;
+    right: 12px;
+    width: min(285px, calc(100vw - 24px));
+  }
+
+  .profile-page {
+    width: calc(100% - 28px);
+    min-height: 600px;
+    padding: 34px 0 55px;
+  }
+
+  .profile-card {
+    padding: 22px;
+    border-radius: 14px;
+  }
+
+  .profile-header h1 {
+    font-size: 29px;
+  }
+
+  .profile-field {
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 8px;
+  }
+
+  .profile-field label {
+    flex-basis: auto;
+  }
+
+  .profile-field > span,
+  .profile-email,
+  .profile-field input {
+    width: 100%;
+    text-align: left;
+  }
+
+  .profile-email {
+    justify-content: flex-start;
+  }
+
+  .profile-actions {
+    flex-direction: column;
+  }
+
+  .profile-actions button {
+    width: 100%;
+  }
+}
+/* =========================================================
+   TWO-PRODUCT CAROUSEL — TEXT ALIGNMENT ONLY
+   Keeps category + product name together on the left,
+   while price stays aligned on the right.
+========================================================= */
+.product-carousel-slide .product-info-title {
+  min-width: 0;
+}
+
+.product-carousel-slide .product-info-title small,
+.product-carousel-slide .product-info-title h3 {
+  display: block;
+}
+
+.product-carousel-slide .product-info-title h3 {
+  margin-bottom: 0;
+  line-height: 1.15;
+}
+
+.product-carousel-slide .product-info > strong {
+  align-self: start;
+  white-space: nowrap;
+}
+
+.product-carousel-slide .product-info > p {
+  text-align: left;
+}
+
+.product-carousel-slide .product-info > .primary-btn {
+  justify-self: start;
+}
+
+.carousel-arrow:disabled {
+  opacity: .45;
+  cursor: default;
+  pointer-events: none;
+}

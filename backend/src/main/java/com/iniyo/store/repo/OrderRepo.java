@@ -1,0 +1,1 @@
+package com.iniyo.store.repo; import com.iniyo.store.model.*; import org.springframework.data.jpa.repository.JpaRepository; import java.util.*; public interface OrderRepo extends JpaRepository<Order,Long>{List<Order> findByUserOrderByCreatedAtDesc(User user);}

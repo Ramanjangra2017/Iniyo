@@ -1,0 +1,1 @@
+package com.iniyo.store.repo; import com.iniyo.store.model.Product; import org.springframework.data.jpa.repository.JpaRepository; import java.util.*; public interface ProductRepo extends JpaRepository<Product,Long>{List<Product> findByActiveTrue();}
